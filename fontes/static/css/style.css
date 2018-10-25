@@ -1,0 +1,48 @@
+body {
+    font-family: 'Actor';font-size: 18px;
+}
+
+.conteudo, .classificacao{
+    font-weight: normal;
+}
+
+.classificacao{
+    color: #fff;
+    font-weight: 400;
+}
+
+.classificacao.Negativo{
+    background-color: red;
+}
+
+.classificacao.Neutro{
+    background-color: grey;
+}
+
+.classificacao.Positivo{
+    background-color: green;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+}
+
+table {
+    max-width: 60%;
+}
+
+.graficos{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+
+.grafico{
+    margin: auto;
+}
