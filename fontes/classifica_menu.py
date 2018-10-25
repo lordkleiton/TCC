@@ -41,8 +41,7 @@ def executa():
 		'Repugnante a atitude desse senhor',
 		'eu apoio a esse novo governo',
 		'espero que esse governo seja repleto de mudanças para melhor',
-		'amei essa nova atitude',
-		'te amei pra caralho'
+		'amei essa nova atitude'
 	]
 
 	frases_teste = pd.read_json('./dados/json/data_file.json')
