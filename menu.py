@@ -2,7 +2,7 @@ import fontes.requisita_menu as req
 import fontes.classifica_menu as cla
 
 print("Insira '1' para fazer as requisições, '2' para classificações e 'q' para sair:")
-entrada = input("(1 = requisição; 2 = classificação): ")
+entrada = input("(1 = requisição; 2 = classificação; q = sair): ")
 
 verifica = 0
 
