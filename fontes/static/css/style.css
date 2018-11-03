@@ -33,6 +33,11 @@ th, td {
 
 table {
     max-width: 60%;
+    min-width: 30%;
+}
+
+td{
+    text-align: center;
 }
 
 .graficos{
