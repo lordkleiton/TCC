@@ -98,8 +98,48 @@
 
 	<h1>Frases classificadas</h1>
 	<table border="1">
+		{% set p = [] %}
+		{% set n1 = [] %}
+		{% set n2 = [] %}
+		{% for i in range(0, classificacoes|count): %}
+			{% if classificacoes[i] == 'Positivo': %}
+				{% if p.append('1') %}{% endif %}
+			{% elif classificacoes[i] == 'Negativo': %}
+				{% if n1.append('1') %}{% endif %}
+			{% elif classificacoes[i] == 'Neutro': %}
+				{% if n2.append('1') %}{% endif %}
+			{% endif %}
+		{% endfor %}
 		<thead>
 			<tr>
+				<th colspan="2">Totais</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Positivos</th>
+				<td>{{ p|count }}</td>
+			</tr>
+			<tr>
+				<th>Negativos</th>
+				<td>{{ n1|count }}</td>
+			</tr>
+			<tr>
+				<th>Neutros</th>
+				<td>{{ n2|count }}</td>
+			</tr>
+			<tr>
+				<th>Total</th>
+				<td>{{ classificacoes|count }}</td>
+			</tr>
+		</tbody>
+	</table>
+	</br>
+	</br>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>#</th>
 				<th>Classificação</th>
 				<th>Texto</th>
 			</tr>
@@ -107,6 +147,7 @@
 		<tbody>
 			{% for i in range(0, classificacoes|count): %}
 				<tr>
+					<th class="conteudo">{{ i + 1 }}</th>
 					<th class="classificacao {{ classificacoes[i] }}">{{ classificacoes[i] }}</th>
 					<th class="conteudo">{{ frases[i] }}</th>
 				</tr>
